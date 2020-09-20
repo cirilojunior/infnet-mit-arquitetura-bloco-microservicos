@@ -1,5 +1,6 @@
 /.idea/*
 /docs/~$*.docx
+/docs/~$*.pptx
 /docs/C4 Model/target
 /docs/C4 Model/.idea/*
 /docs/C4 Model/*.iml
