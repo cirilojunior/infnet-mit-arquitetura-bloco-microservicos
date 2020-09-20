@@ -1,7 +1,19 @@
 /.idea/*
+
 /docs/~$*.docx
 /docs/~$*.pptx
 /docs/C4 Model/target
 /docs/C4 Model/.idea/*
 /docs/C4 Model/*.iml
 /docs/C4 Model/structurizr-*.json
+
+/solution/**/target
+/solution/**/pom.xml.tag
+/solution/**/pom.xml.releaseBackup
+/solution/**/pom.xml.versionsBackup
+/solution/**/pom.xml.next
+/solution/**/release.properties
+/solution/**/dependency-reduced-pom.xml
+/solution/**/buildNumber.properties
+/solution/**/.mvn/timing.properties
+/solution/**/.mvn/wrapper/maven-wrapper.jar
