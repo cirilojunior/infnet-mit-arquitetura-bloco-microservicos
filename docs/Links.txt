@@ -1,0 +1,51 @@
+https://c4model.com/
+
+https://structurizr.com/
+https://structurizr.com/dashboard
+https://structurizr.com/help/code
+https://github.com/structurizr/java/blob/master/docs/documentation.md
+https://structurizr.com/share/36141
+
+https://www.youtube.com/watch?v=S6eO_T5rq9o
+https://www.youtube.com/results?search_query=Structurizr+tutorial
+https://www.youtube.com/watch?v=_I0U1sZ9RJ8
+https://www.youtube.com/watch?v=Tf3eNaB-LGs
+
+https://www.eximiaco.tech/pt/2020/06/18/software-architecture-for-developers-volumes-1-2/
+https://www.eximiaco.tech/pt/2020/01/24/como-determinar-o-volume-de-documentacao-arquitetural-para-um-software/
+https://www.eximiaco.tech/pt/?s=c4+model
+https://www.eximiaco.tech/pt/2019/08/12/o-que-e-e-para-que-serve-o-c4-model/
+https://www.eximiaco.tech/pt/2019/08/12/representando-o-contexto-de-um-sistema-de-software-com-c4-model/
+https://www.eximiaco.tech/pt/2019/08/12/explicitando-os-conteineres-de-um-sistema-de-software-usando-o-c4-model/
+https://www.eximiaco.tech/pt/2019/08/12/explicitando-os-componentes-de-um-conteiner-usando-c4-model/
+
+
+------
+
+
+https://dzone.com/articles/streamlined-microservice-design-in-practice
+https://chrisrichardson.net/post/microservices/general/2019/02/27/microservice-canvas.html
+
+------
+
+http://derberg.github.io/documenting-microservices/#/
+https://github.com/sap-archive/docpad-skeleton-apidocs
+
+------
+
+https://blog.readme.com/documenting-microservices/
+
+------
+
+https://slidedeck.io/derberg/documenting-microservices
+
+------
+
+https://openmicroservices.org/
+
+------
+
+I AM
+- https://solutionsreview.com/identity-management/the-10-best-free-and-open-source-identity-management-tools/
+- Apache Syncope
+    https://syncope.apache.org/docs/2.1/getting-started.html#paths-and-components
