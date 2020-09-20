@@ -1,0 +1,7 @@
+/.idea/*
+/docs/^$*.docx
+/docs/C4 Model/target
+/docs/C4 Model/.idea/*
+/docs/C4 Model/*.iml
+/docs/C4 Model/structurizr-*.json
+
