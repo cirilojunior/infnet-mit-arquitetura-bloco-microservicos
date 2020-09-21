@@ -1,3 +1,5 @@
+package exemplos;
+
 import com.structurizr.Workspace;
 import com.structurizr.api.StructurizrClient;
 import com.structurizr.model.Model;

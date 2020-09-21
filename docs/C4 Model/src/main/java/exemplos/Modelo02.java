@@ -1,3 +1,5 @@
+package exemplos;
+
 import com.structurizr.Workspace;
 import com.structurizr.api.StructurizrClientException;
 import com.structurizr.model.*;
@@ -6,42 +8,44 @@ import com.structurizr.view.ViewSet;
 
 import java.io.IOException;
 
+
+
 /**
  * Modelagem Arquitetural dos serviços do Job Hunter System.
  */
 public class Modelo02 {
-
-    private final Deployer deployer;
-    private final ViewDecorator viewDecorator;
-    private final WorkspaceFactory workspaceFactory;
-
-    public static void main(String[] args) throws Exception {
-        new Modelo02().build();
-    }
-
-    public Modelo02() {
-        workspaceFactory = new WorkspaceFactory();
-        viewDecorator = new ViewDecorator();
-        deployer = new Deployer();
-    }
-
-    void build() throws IOException, StructurizrClientException {
-
-        final Workspace workspace = workspaceFactory.create();
-
-        final Model model = workspace.getModel();
-        model.setEnterprise(new Enterprise("IT Job Hunters"));
-
-        final SoftwareSystem jobHunterSystem = createSystem(model);
-
-        final ViewSet views = workspace.getViews();
-
-        createContextView(jobHunterSystem, views);
-
-        viewDecorator.decorate(views);
-
-        deployer.deploy(workspace);
-    }
+//
+//    private final Deployer deployer;
+//    private final ViewDecorator viewDecorator;
+//    private final WorkspaceFactory workspaceFactory;
+//
+//    public static void main(String[] args) throws Exception {
+//        new Modelo02().build();
+//    }
+//
+//    public Modelo02() {
+//        workspaceFactory = new WorkspaceFactory();
+//        viewDecorator = new ViewDecorator();
+//        deployer = new Deployer();
+//    }
+//
+//    void build() throws IOException, StructurizrClientException {
+//
+//        final Workspace workspace = workspaceFactory.create();
+//
+//        final Model model = workspace.getModel();
+//        model.setEnterprise(new Enterprise("IT Job Hunters"));
+//
+//        final SoftwareSystem jobHunterSystem = createSystem(model);
+//
+//        final ViewSet views = workspace.getViews();
+//
+//        createContextView(jobHunterSystem, views);
+//
+//        viewDecorator.decorate(views);
+//
+//        deployer.deploy(workspace);
+//    }
 
     private void createContextView(SoftwareSystem jobHunterSystem, ViewSet views) {
         final SystemContextView contextView = views.createSystemContextView(jobHunterSystem, "SystemContext", "Diagrama de Contexto.");

@@ -10,17 +10,17 @@ import com.structurizr.view.ViewSet;
 /**
  * Modelagem Arquitetural dos serviços do Job Hunter System.
  */
-public class SystemContext {
+public class Containers {
 
     private final Deployer deployer;
     private final ViewDecorator viewDecorator;
     private final WorkspaceFactory workspaceFactory;
 
     public static void main(String[] args) throws Exception {
-        new SystemContext().build();
+        new Containers().build();
     }
 
-    public SystemContext() {
+    public Containers() {
         workspaceFactory = new WorkspaceFactory();
         viewDecorator = new ViewDecorator();
         deployer = new Deployer();
@@ -37,10 +37,7 @@ public class SystemContext {
          * Pessoas
          **************************************************************************************************************/
         // Pessoas
-        final Person cliente = model.addPerson("Cliente", "Clientes da IT Job Hunters.");
         final Person analista = model.addPerson("Analista", "Analista que participa de processos seletivos.");
-        final Person candidato = model.addPerson("´Candidato", "Candidato à vagas.");
-        final Person gestor = model.addPerson("Gestor", "Acompanha relatórios e interage com módulos relacionados à contratuais.");
 
         /**************************************************************************************************************
          * Sistemas
@@ -50,20 +47,17 @@ public class SystemContext {
         /**************************************************************************************************************
          * Relacionamentos
          **************************************************************************************************************/
-        cliente.uses(jobHunterSystem, "Solicita, acompanha e aprova Processos Seletivos.");
-        analista.uses(jobHunterSystem, "Conduz Processos Seletivos e Contratações.");
-        candidato.uses(jobHunterSystem, "Confirma aceitação de vaga caso aprovado.");
-        gestor.uses(jobHunterSystem, "Acompanha performance e resultados em relação à Oportunidades geradas e  Processos Seletivos finalizados.");
+        analista.uses(jobHunterSystem, "Cadastra um novo Perfil de Vaga.");
 
-        jobHunterSystem.delivers(analista, "Informa sobre oportunidades nos clientes.");
-        jobHunterSystem.delivers(analista, "Informa sobre possíveis candidatos para oportunidades.");
-
+        jobHunterSystem.delivers(analista, "Lista Perfis desejados por Clientes.");
+        jobHunterSystem.addContainer("Teste", "teste1", "openshift");
+        jobHunterSystem.getContainers()
 
         /**************************************************************************************************************
          * Visualizações
          **************************************************************************************************************/
         final ViewSet views = workspace.getViews();
-        final SystemContextView contextView = views.createSystemContextView(jobHunterSystem, "SystemContext", "Diagrama de Contexto do Sistema.");
+        final SystemContextView contextView = views.createSystemContextView(jobHunterSystem, "Container", "Diagrama de Contexto do Sistema.");
         contextView.addAllSoftwareSystems();
         contextView.addAllPeople();
         viewDecorator.decorate(views);
