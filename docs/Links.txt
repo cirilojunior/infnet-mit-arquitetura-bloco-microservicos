@@ -49,3 +49,10 @@ I AM
 - https://solutionsreview.com/identity-management/the-10-best-free-and-open-source-identity-management-tools/
 - Apache Syncope
     https://syncope.apache.org/docs/2.1/getting-started.html#paths-and-components
+
+------
+
+https://www.altexsoft.com/blog/non-functional-requirements/
+https://www.scaledagileframework.com/nonfunctional-requirements/#:~:text=Nonfunctional%20Requirements%20(NFRs)%20define%20system,system%20across%20the%20different%20backlogs.&text=They%20ensure%20the%20usability%20and%20effectiveness%20of%20the%20entire%20system.
+https://www.nngroup.com/articles/response-times-3-important-limits/
+https://uptime.is/

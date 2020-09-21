@@ -19,8 +19,7 @@ public class CadastraPerfilServiceTest {
 
     @Before
     public void setup() {
-
-        this.perfilQueryRepository = IN_MEMORY_REPO;
+        perfilQueryRepository = IN_MEMORY_REPO;
         service = new CadastraPerfilService(IN_MEMORY_REPO);
     }
 

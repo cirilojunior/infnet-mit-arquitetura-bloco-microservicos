@@ -1,0 +1,24 @@
+- Apresentar meu perfil
+- Explicar a escolha por foco em documentação
+    - dificuldade em achar o meio-termo
+- Proposta
+    - pesquisa
+        - onde usar cada técnica (UML, DDD, ...)?
+            - UML as Sketch
+            - DDD
+            - Canvas
+            - CQS e CQRS
+            - Tiny types
+- Problema
+    - como analisado e porque
+        - Classes de domínio
+    -
+- Solução
+    - como definido e porque
+- conclusões
+- referências
+
+
+------
+
+ATENÇÃO: Aprender mais sobre requisitos não funcionais!! Disponibilidade e escala!!!!
