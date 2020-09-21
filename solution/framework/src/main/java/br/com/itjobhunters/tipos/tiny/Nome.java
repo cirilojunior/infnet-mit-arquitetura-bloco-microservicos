@@ -14,11 +14,7 @@ public class Nome {
     @EqualsAndHashCode.Include
     private Texto valor;
 
-    public Nome(final String valor) {
-        this(Texto.para(valor));
-    }
-
-    public Nome(final Texto valor) {
+    private Nome(final Texto valor) {
         if (!valor.atingiu(TAMANHO_MINIMO)) {
             throw new TamanhoMinimoTextoException();
         }
@@ -28,6 +24,14 @@ public class Nome {
         }
 
         this.valor = valor;
+    }
+
+    public static Nome para(final String valor) {
+        return new Nome(Texto.para(valor));
+    }
+
+    public static Nome para(final Texto valor) {
+        return new Nome(valor);
     }
 
     @Override

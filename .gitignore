@@ -8,6 +8,7 @@
 /docs/C4 Model/structurizr-*.json
 
 /solution/**/target
+/solution/**/*.iml
 /solution/**/pom.xml.tag
 /solution/**/pom.xml.releaseBackup
 /solution/**/pom.xml.versionsBackup

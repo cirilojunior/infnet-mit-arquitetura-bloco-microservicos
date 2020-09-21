@@ -7,4 +7,6 @@ public interface QueryRepository<T> extends Repository<T> {
 
     Lista<T> list(QueryCriterias queryCriterias);
 
+    Lista<T> list(QueryCriteria<?> criteria);
+
 }

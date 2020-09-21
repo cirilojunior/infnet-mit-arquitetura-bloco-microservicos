@@ -10,11 +10,11 @@ public class CodigoTest {
 
     @Test
     public void igualdade() {
-        final Codigo<Integer> codigo = new Codigo<>(1);
+        final Codigo<Integer> codigo = Codigo.para(1);
         assertTrue(codigo.getValor().equals(1));
         assertFalse(codigo.getValor().equals(2));
-        assertTrue(codigo.equals(new Codigo<>(1)));
-        assertFalse(codigo.equals(new Codigo<>(2)));
+        assertTrue(codigo.equals(Codigo.para(1)));
+        assertFalse(codigo.equals(Codigo.para(2)));
     }
 
 }

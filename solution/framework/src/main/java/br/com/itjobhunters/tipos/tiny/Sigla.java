@@ -10,15 +10,11 @@ import lombok.Value;
 public class Sigla {
 
     public static final int TAMANHO_MINIMO = 5;
-    public static final int TAMANHO_MAXIMO = 10;
+    public static final int TAMANHO_MAXIMO = 15;
     @EqualsAndHashCode.Include
     private Texto valor;
 
-    public Sigla(final String valor) {
-        this(Texto.para(valor));
-    }
-
-    public Sigla(final Texto valor) {
+    private Sigla(final Texto valor) {
         if (!valor.atingiu(TAMANHO_MINIMO)) {
             throw new TamanhoMinimoTextoException();
         }
@@ -28,6 +24,14 @@ public class Sigla {
         }
 
         this.valor = valor;
+    }
+
+    public static Sigla para(final String valor) {
+        return new Sigla(Texto.para(valor));
+    }
+
+    public static Sigla para(final Texto valor) {
+        return new Sigla(valor);
     }
 
     @Override

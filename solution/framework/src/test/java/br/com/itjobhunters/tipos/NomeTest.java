@@ -12,17 +12,17 @@ public class NomeTest {
 
     @Test
     public void criaPorString() {
-        assertEquals("ab", new Nome("ab").toString());
+        assertEquals("ab", Nome.para("ab").toString());
     }
 
     @Test(expected = TamanhoMinimoTextoException.class)
     public void nomeTamanhoMinimo() {
-        new Nome(Texto.para("a"));
+        Nome.para(Texto.para("a"));
     }
 
     @Test(expected = TamanhoMaximoTextoException.class)
     public void nomeTamanhoMaximo() {
-        new Nome(Texto.para("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"));
+        Nome.para(Texto.para("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab"));
     }
 
 }

@@ -14,11 +14,7 @@ public class Descricao {
     @EqualsAndHashCode.Include
     private Texto valor;
 
-    public Descricao(final String valor) {
-        this(Texto.para(valor));
-    }
-
-    public Descricao(final Texto valor) {
+    private Descricao(final Texto valor) {
         if (!valor.atingiu(TAMANHO_MINIMO)) {
             throw new TamanhoMinimoTextoException();
         }
@@ -28,6 +24,14 @@ public class Descricao {
         }
 
         this.valor = valor;
+    }
+
+    public static Descricao para(final String valor) {
+        return new Descricao(Texto.para(valor));
+    }
+
+    public static Descricao para(final Texto valor) {
+        return new Descricao(valor);
     }
 
     @Override

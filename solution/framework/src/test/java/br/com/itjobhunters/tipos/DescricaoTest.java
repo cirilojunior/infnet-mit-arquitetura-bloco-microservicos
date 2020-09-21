@@ -12,17 +12,17 @@ public class DescricaoTest {
 
     @Test
     public void criaPorString() {
-        assertEquals("abcde", new Descricao("abcde").toString());
+        assertEquals("abcde", Descricao.para("abcde").toString());
     }
 
     @Test(expected = TamanhoMinimoTextoException.class)
     public void nomeTamanhoMinimo() {
-        new Descricao(Texto.para("abcd"));
+        Descricao.para(Texto.para("abcd"));
     }
 
     @Test(expected = TamanhoMaximoTextoException.class)
     public void nomeTamanhoMaximo() {
-        new Descricao(Texto.para("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
+        Descricao.para(Texto.para("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
                 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
                 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
                 "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +

@@ -10,18 +10,22 @@ import java.util.Iterator;
 @NoArgsConstructor
 public class QueryCriterias {
 
-    Lista<Criteria> criterias = new Lista<>();
+    Lista<QueryCriteria<?>> criterias = new Lista<>();
 
-    public QueryCriterias(final Criteria criteria) {
+    private QueryCriterias(final QueryCriteria criteria) {
         add(criteria);
     }
 
-    public QueryCriterias add(final Criteria criteria) {
+    public static <T> QueryCriterias of(final QueryCriteria<T> criteria) {
+        return new QueryCriterias(criteria);
+    }
+
+    public QueryCriterias add(final QueryCriteria criteria) {
         criterias.adiciona(criteria);
         return this;
     }
 
-    public Iterator<Criteria> iterator() {
+    public Iterator<QueryCriteria<?>> iterator() {
         return criterias.getLista().iterator();
     }
 
