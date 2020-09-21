@@ -1,6 +1,5 @@
 - Apresentar meu perfil
-- Explicar a escolha por foco em documentação
-    - dificuldade em achar o meio-termo
+- Explicar a escolha por foco em documentação e a necessidade de por a mão em código :-)
 - Proposta
     - pesquisa
         - onde usar cada técnica (UML, DDD, ...)?
