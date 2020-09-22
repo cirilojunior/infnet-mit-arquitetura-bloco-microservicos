@@ -24,7 +24,7 @@ public class CadastraPerfilServiceTest {
     }
 
     @Test
-    public void perfisDesejadosCliente() {
+    public void incluirPerfil() {
 
         final Perfil novoPerfil = PerfilGestao.builder()
                 .tipo(Perfil.Tipo.TECNICO)

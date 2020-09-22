@@ -1,0 +1,55 @@
+Proposta de Rúbricas
+------------------------
+DOCUMENTAÇÃO
+------------------------
+- Contextualização do Problema
+    - Relação Problema X Solução
+- Análise
+    - Modelagem de Domínio da solução
+- Projeto
+    - Especificação
+        - Classes de Projeto
+        - CRC Cards
+        - Casos de Uso
+        - User Stories
+    - Patterns e Boas Práticas
+        - DDD
+        - S.O.L.I.D
+        - CQS
+        - Legibilidade e Expressividade de código
+        - Reuso (DRY)
+        - Evidências / Cases que corroborem o que foi proposto
+    - Arquitetura e aspectos não-funcional Autenticação e Autorização
+        - Representação da Arquitetura
+            - Camadas
+                - Baseadas em DDD
+                - Baseadas em algum outro "catálogo" conhecido de mercado
+            - Archimate
+            - C4 Model
+            - Algum Canvas
+        - CQRS
+        - Processamento assíncrono / Broker
+        - Eventos
+        - I Am
+        - Escala
+        - Segurança
+        - Disponibilidade
+        - Dependência entre os componentes de software
+        - Evidências / Cases que corroborem o que foi proposto
+    - Protótipo
+    - Inovação
+        - Novas práticas, abordagens, metodologias e ferramentas de apoio
+
+------------------------------------------------
+COMBINADA DOCUMENTAÇÃO + IMPLEMENTAÇÕES
+------------------------------------------------
+    - Considerar as rubricas de implementações + as de documentação
+    - O foco aqui poderia ver algo executável que comprove a proposta
+        - Roda?
+        - Aplicou patterns, boas práticas
+        - Testes automatizados
+        - Recursos reais ou mockados?
+            - Banco
+            - Broker
+            - I Am
+        - Deploy....

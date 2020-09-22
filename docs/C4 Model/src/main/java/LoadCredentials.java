@@ -25,6 +25,10 @@ public class LoadCredentials {
         workspaceID = Integer.valueOf(credenciais.getProperty("structurizr.workspace.id"));
         apiKey = credenciais.getProperty("structurizr.api.key");
         apiSecret = credenciais.getProperty("structurizr.api.secret");
+
+        if ((workspaceID == null) && (apiKey == null) && (apiSecret == null)) {
+            throw new NullPointerException("Informe suas credenciais. Deve-se ter conta no Structurizer!!!");
+        }
     }
 
     public Integer getWorkspaceID() {
