@@ -4,6 +4,7 @@ import br.com.itjobhunters.tipos.tiny.Codigo;
 import br.com.itjobhunters.tipos.tiny.Descricao;
 import br.com.itjobhunters.tipos.tiny.Nome;
 import br.com.itjobhunters.tipos.tiny.Sigla;
+import br.com.itjobhunters.tipos.tiny.exception.TamanhoMinimoTextoException;
 import br.com.itjobhunters.vaga.Nivel;
 import br.com.itjobhunters.vaga.cargo.Cargo;
 import org.junit.Before;
@@ -35,9 +36,25 @@ public class CadastraPerfilServiceTest {
                 .descricaoDetalhada(Descricao.para("blah blah blah"))
                 .build();
 
-        final Perfil cadastra = service.cadastra(novoPerfil);
-
+        assertEquals(5, perfilQueryRepository.total());
+        service.cadastra(novoPerfil);
         assertEquals(6, perfilQueryRepository.total());
+    }
+
+    @Test(expected = TamanhoMinimoTextoException.class)
+    public void falhaPorCriacaoTipoInvalidoPerfil() {
+
+        final Perfil novoPerfil = PerfilGestao.builder()
+                .tipo(Perfil.Tipo.TECNICO)
+                .nome(Nome.para("Dev Full Stack"))
+                .cargo(Cargo.para(Codigo.para(10)))
+                .nivel(Nivel.PLENO)
+                .sigla(Sigla.para("DEV_FULLST_PLN"))
+                .descricaoDetalhada(Descricao.para("blah")) // Falha aqui pq a descricao não atingiu o mínimo!
+                // Isso evita validações desnecessárias em vários pontos!
+                .build();
+
+        service.cadastra(novoPerfil); // nem chega aqui. Foi só pra exemplificar a segurança que isso traz.
     }
 
 }
